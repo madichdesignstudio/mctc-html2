@@ -1,0 +1,86 @@
+/* Minimal styles + your color palette + font updates */
+body {
+  background: #F2EFED;   /* light background */
+  color: #2C2C2C;        /* body text */
+  font-family: "Source Sans 3", "Source Sans Pro", Arial, Helvetica, sans-serif;
+  font-size: 16px;       /* base body size */
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Left sidebar navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background: #7B4246;   /* sidebar */
+  color: #F2EFED;        /* sidebar text */
+  padding: 8px;
+}
+
+/* Headers use Playfair Display and are larger than body copy */
+#navbar header,
+.main-section header {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+
+#navbar header {
+  font-size: 1.25rem;
+  margin: 8px 0;
+}
+
+.main-section header {
+  color: #7B4246;
+  font-size: 1.75rem;
+  margin: 8px 0;
+}
+
+/* Main content area */
+#main-doc {
+  margin-left: 256px;
+  padding: 16px;
+}
+
+/* SIMPLER box-style navigation links (1px border, no radius) */
+.nav-link {
+  display: block;
+  margin: 8px 0;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: bold;
+
+  color: #F2EFED;             /* text on dark sidebar */
+  background: transparent;    /* show the sidebar color */
+  border: 1px solid #F2EFED;  /* thinner visible box */
+}
+
+/* Simple hover to a filled look */
+.nav-link:hover {
+  background: #F2EFED;
+  color: #2C2C2C;
+  border-color: #F2EFED;
+}
+
+/* Links in main content */
+a {
+  color: #FF4A96;
+}
+
+/* Media query required by the project */
+@media (max-width: 800px) {
+  #navbar {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+  #main-doc {
+    margin: 0;
+  }
+  .nav-link {
+    display: inline-block;
+    margin: 8px 8px 8px 0;
+  }
+}
