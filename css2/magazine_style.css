@@ -12,8 +12,8 @@ html {
 
 body {
   font-family: 'Baskervville', serif;
-  color: linen;
-  background-color: rgb(20, 30, 40);
+  color: #1E1E1E;
+  background-color: #E4DDD8;
 }
 
 h1 {
@@ -26,7 +26,7 @@ h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  color: linen;
+  color: #7B4246;
 }
 
 main {
@@ -42,7 +42,7 @@ img {
 
 hr {
   margin: 1.5rem 0;
-  border: 1px solid rgba(120, 120, 120, 0.6);
+  border: 1px solid #FFFFFF;
 }
 
 .heading {
@@ -67,27 +67,29 @@ hr {
 
 .hero-title {
   text-align: center;
-  color: orangered;
+  color: #7B4246;
   font-size: 8rem;
 }
 
 .hero-subtitle {
   font-size: 2.4rem;
-  color: orangered;
+  color: #7B4246;
   text-align: center;
 }
 
 .author {
+    color: #D59A9E;
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
 }
 
 .author-name a:hover {
-  background-color: #306203;
+  background-color: #D59A9E;
 }
 
 .publish-date {
-  color: rgba(255, 255, 255, 0.5);
+  color: #D59A9E;
+  font-weight: bolder;
 }
 
 .social-icons {
@@ -101,13 +103,13 @@ hr {
 
 .first-paragraph::first-letter {
   font-size: 6rem;
-  color: orangered;
+  color: #7B4246;
   float: left;
   margin-right: 1rem;
 }
 
 .quote {
-  color: #00beef;
+  color: #FF4A96;
   font-size: 2.4rem;
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -138,7 +140,7 @@ hr {
 }
 
 .list-title, .list-subtitle {
-  color: #00beef;
+  color: #7B4246;
 }
 
 .image-wrapper {
