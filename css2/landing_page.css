@@ -22,6 +22,9 @@ h1,h2,h3{
   font-family:"Playfair Display",Georgia,serif;
   color:var(--charcoal);
 }
+h2 {
+  text-align: center;
+}
 
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -65,45 +68,93 @@ a{color:inherit}
 
 #nav-bar a:hover{color:var(--rose)}
 
-/* Hero */
-.hero{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:2rem;
-  padding-block:2rem;
-}
-
-.hero h1{
-  font-size:clamp(2rem,1.2rem+2vw,3rem);
-  margin:0 0 .25rem;
-}
-
-.hero p{
-  margin:0 0 1rem;
-  color:#555;
-}
-
-.cta{
-  display:inline-block;
-  padding:.8rem 1rem;
-  border-radius:12px;
-  border:1px solid var(--rose);
-  background:var(--rose);
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-}
-
-.cta:hover{filter:brightness(.95)}
-
-.hero-img {
-  border-radius:14px;
-  border:1px solid var(--border);
-  max-width: 800px;
+/* HERO SECTION — full-bleed image with overlay text */
+.hero {
+  position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
+
+/* Image shows in true proportions, full width */
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Absolute overlay layer */
+.hero-inner {
+  position: absolute;
+  inset: 0; /* top:0; left:0; right:0; bottom:0 */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* left align text */
+  padding: 0 1.5rem;
+  z-index: 2;
+}
+
+/* Text block */
+.hero-copy {
+  max-width: 600px;
+  color: #fff;
+}
+
+.hero-copy h1,
+.hero-copy h4,
+.hero-copy p {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Headline */
+.hero-copy h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin-bottom: .5rem;
+}
+
+/* Subhead */
+.hero-copy h4 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Paragraph */
+.hero-copy p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 550px;
+  margin-bottom: 1.25rem;
+}
+
+/* CTA button */
+.hero .cta {
+  display: inline-block;
+  padding: .8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--rose);
+  background: var(--rose);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 3;
+  position: relative;
+}
+
+.hero .cta:hover {
+  filter: brightness(.95);
+}
+
+/* MOBILE: center overlay text */
+@media (max-width: 780px){
+  .hero-inner {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
 
 /* Quote Sections */
 .quote-section {
@@ -140,19 +191,36 @@ section{
   scroll-margin-top:70px;
 }
 
-.features-grid{
-  display:flex;
-  gap:1rem;
-  flex-wrap:wrap;
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.feature{
-  flex:1 1 260px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:1rem;
-  background:var(--cream);
+/* Base: 4 in a row on large screens */
+.feature {
+  flex: 1 1 22%;   /* roughly 4 per row with some gap */
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  background: var(--cream);
 }
+
+/* Tablet: 2 in a row */
+@media (max-width: 1100px) {
+  .feature {
+    flex: 1 1 48%;  /* 2 per row */
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+  .feature {
+    flex: 1 1 100%; /* full width */
+  }
+}
+
+
 
 /* Video */
 .video-wrapper{
@@ -330,4 +398,14 @@ section{
   .service-option {
     min-width: 100%;
   }
+}
+.story-intro {
+  max-width: 800px;     /* keeps the paragraph from going too wide */
+  margin: 0 auto;       /* centers it on the page */
+  padding: 0 1.5rem;    /* left and right padding */
+}
+
+.story-intro p {
+  text-align: left;   /* optional — remove if you don't want centered text */
+  line-height: 1.7;     /* improves readability */
 }
