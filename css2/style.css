@@ -1,8 +1,7 @@
 body {
-  background: #F2EFED;   /* light background */
-  color: #2C2C2C;        /* body text */
-  font-family: Playfair Display
-  font-size: 16px;       /* base body size */
+  background: #F2EFED;
+  color: #2C2C2C;
+  font-size: 16px;
   line-height: 1.5;
   margin: 0;
 }
@@ -13,8 +12,8 @@ body {
   left: 0;
   width: 240px;
   height: 100%;
-  background: #7B4246;   /* sidebar */
-  color: #F2EFED;        /* sidebar text */
+  background: #7B4246;
+  color: #F2EFED;
   padding: 8px;
 }
 
@@ -80,7 +79,19 @@ a {
   }
 }
 
+  h1 {
+    
+
   h3 {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
